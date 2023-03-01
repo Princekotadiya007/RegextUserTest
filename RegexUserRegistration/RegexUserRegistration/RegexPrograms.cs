@@ -39,6 +39,11 @@ namespace RegexUserRegistration
             string pattern = "(?=.*[A-Z])[A-Za-z0-9]{8,}";
             return TestPattern(pattern, input);
         }
+        public string ValidPasswordRule3(string input)
+        {
+            string pattern = "(?=.*[A-Z])(?=.*[0-9])[A-Za-z0-9]{8,}";
+            return TestPattern(pattern, input);
+        }
         public string TestPattern(string pattern, string input)
         {
             if (Regex.IsMatch(input, pattern))

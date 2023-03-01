@@ -42,5 +42,11 @@ namespace TestUserRegex
             string result = regex.ValidPasswordRule2("PRINCES7");
             Assert.AreEqual("Valid", result);
         }
+        [Test]
+        public void PasswordRule3_ValidOrNot()
+        {
+            string result = regex.ValidPasswordRule3("Princes7");
+            Assert.AreEqual("Valid", result);
+        }
     }
 }
