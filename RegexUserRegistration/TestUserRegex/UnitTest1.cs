@@ -24,5 +24,11 @@ namespace TestUserRegex
             string result = regex.ValidateEmail("abc.xyz@bridgelabz.co.in");
             Assert.AreEqual("Valid", result);
         }
+        [Test]
+        public void PhoneNumber_ValidOrNot()
+        {
+            string result = regex.ValidatePhoneNumber("91 6352129268");
+            Assert.AreEqual("Valid", result);
+        }
     }
 }
