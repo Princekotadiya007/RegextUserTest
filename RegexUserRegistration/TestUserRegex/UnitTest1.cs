@@ -12,5 +12,11 @@ namespace TestUserRegex
             string result = regex.ValidateFirstName("Prince");
             Assert.AreEqual("Valid",result);
         }
+        [Test]
+        public void LasttName_ValidOrNot()
+        {
+            string result = regex.ValidateLastName("Prince");
+            Assert.AreEqual("Valid", result);
+        }
     }
 }

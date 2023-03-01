@@ -14,7 +14,12 @@ namespace RegexUserRegistration
             string pattern = "^[A-z]{1}[a-z]{2,}$";
             return TestPattern(pattern, input);
         }
-        public string TestPattern(string pattern, string input)
+        public string ValidateLastName(string input)
+        {
+            string pattern = "^[A-Z]{1}[a-z]{2,}$";
+            return TestPattern(pattern, input);
+        }
+            public string TestPattern(string pattern, string input)
         {
             if (Regex.IsMatch(input, pattern))
             {
