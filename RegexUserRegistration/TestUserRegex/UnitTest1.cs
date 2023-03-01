@@ -54,5 +54,11 @@ namespace TestUserRegex
             string result = regex.ValidPasswordRule4("Prince07@");
             Assert.AreEqual("Valid", result);
         }
+        [Test]
+        public void SimpleEmail_ValidOrNot()
+        {
+            string result = regex.SimpleEmail("abc@yahoo.com");
+            Assert.AreEqual("Valid", result);
+        }
     }
 }

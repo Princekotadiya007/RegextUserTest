@@ -49,6 +49,11 @@ namespace RegexUserRegistration
             string pattern = "(?=.*[A-Z])(?=.*[0-9])(?=.*[*#@$!^_-])[A-Za-z0-9]{8,}";
             return TestPattern(pattern, input);
         }
+        public string SimpleEmail(string input)
+        {
+            string pattern = "^[0-9A-Za-z]+([._+-][0-9A-Za-z]+)*[@][0-9A-Za-z]+.[a-zA-Z]{2,3}(.[a-zA-Z]{2})?$";
+            return TestPattern(pattern, input);
+        }
         public string TestPattern(string pattern, string input)
         {
             if (Regex.IsMatch(input, pattern))
