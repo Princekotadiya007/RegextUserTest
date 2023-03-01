@@ -29,6 +29,11 @@ namespace RegexUserRegistration
             string pattern = "^[0-9]{2}[ ][0-9]{10}$";
             return TestPattern(pattern, input);
         }
+        public string ValidPasswordRule1(string input)
+        {
+            string pattern = @"[A-Z a-z 0-9]{8,}";
+            return TestPattern(pattern, input);
+        }
         public string TestPattern(string pattern, string input)
         {
             if (Regex.IsMatch(input, pattern))

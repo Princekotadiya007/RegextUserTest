@@ -30,5 +30,11 @@ namespace TestUserRegex
             string result = regex.ValidatePhoneNumber("91 6352129268");
             Assert.AreEqual("Valid", result);
         }
+        [Test]
+        public void PasswordRule1_ValidOrNot()
+        {
+            string result = regex.ValidPasswordRule1("Princes7");
+            Assert.AreEqual("Valid", result);
+        }
     }
 }
